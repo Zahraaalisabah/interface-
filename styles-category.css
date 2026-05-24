@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e8e2d8, #d9d1c4, #cfc5b6);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    text-align: center;
+    min-height: 100vh;
+    color: #5b3539;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-header {
+    width: 100%;
+    height: 130px;
+    background: rgba(91, 53, 57, 0.10);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(91,53,57,0.2);
+    box-sizing: border-box;
+}
+
+.header-left, .header-center, .header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-left {
+    text-align: right;
+    font-size: 16px;
+}
+
+.header-left #time {
+    font-weight: bold;
+    font-size: 30px;
+    color: #5b3539;
+}
+
+.header-left #date {
+    font-size: 20px;
+    color: #6e4348;
+}
+
+.header-center {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5b3539;
+}
+
+.header-right img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(91,53,57,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(91,53,57,0.2);
+    border: 1px solid rgba(91,53,57,0.15);
+}
+
+/* زر الرجوع */
+#back-btn {
+    margin-bottom: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #5b3539;
+    color: #f5f1ea;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#back-btn:hover {
+    background: #6e4348;
+    transform: scale(1.05);
+}
+
+/* محتوى القسم */
+#category-content {
+    text-align: right;
+    font-size: 18px;
+    line-height: 2;
+    color: #5b3539;
+}
+
+#category-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#category-content ul li {
+    margin: 15px 0;
+}
+
+#category-content ul li a {
+    color: #5b3539;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: rgba(91,53,57,0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid rgba(91,53,57,0.15);
+}
+
+#category-content ul li a:hover {
+    background: rgba(91,53,57,0.18);
+    transform: scale(1.05);
+}
+
+/* نص إضافة زبون جديد */
+#category-content p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    background: rgba(91,53,57,0.08);
+    border-radius: 15px;
+    color: #5b3539;
+}
+
+/* كارت الوصول */
+.receipt-card {
+    background: rgba(91,53,57,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: #5b3539;
+    border: 1px solid rgba(91,53,57,0.12);
+}
+
+.receipt-card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #5b3539;
+    color: #f5f1ea;
+    cursor: pointer;
+}
+
+/* تصميم النموذج الجديد */
+.customer-form-card {
+    background: rgba(91,53,57,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(91,53,57,0.2);
+    border: 1px solid rgba(91,53,57,0.12);
+}
+
+.customer-form-card .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.customer-form-card label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #5b3539;
+}
+
+.customer-form-card input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(91,53,57,0.1);
+    color: #5b3539;
+}
+
+.customer-form-card input::placeholder {
+    color: rgba(91,53,57,0.5);
+}
+
+.customer-form-card button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: #5b3539;
+    color: #f5f1ea;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.customer-form-card button:hover {
+    background: #6e4348;
+    transform: scale(1.03);
+}
+
+/* ===== حقل البحث ===== */
+#searchInput {
+    width: 95%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 1px solid rgba(91,53,57,0.15);
+    outline: none;
+    background: rgba(91,53,57,0.08);
+    backdrop-filter: blur(10px);
+    color: #5b3539;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(91,53,57,0.15);
+}
+
+/* لون النص الوهمي */
+#searchInput::placeholder {
+    color: rgba(91,53,57,0.5);
+    font-weight: bold;
+}
+
+/* عند الضغط */
+#searchInput:focus {
+    border: 1px solid #6e4348;
+    background: rgba(91,53,57,0.12);
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(91,53,57,0.2);
+}
+
+
+/* ===== الديون ===== */
+
+.debts-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.debt-box{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(91,53,57,0.08);
+    border:1px solid rgba(91,53,57,0.15);
+    box-shadow:0 10px 25px rgba(91,53,57,0.15);
+}
+
+.debt-box h2{
+    color:#5b3539;
+    margin-bottom:25px;
+}
+
+.debt-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.debt-btn{
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:#5b3539;
+    color:#f5f1ea;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.debt-btn:hover{
+    background:#6e4348;
+    transform:scale(1.03);
+}
+
+/* ===== الرواتب ===== */
+
+.salary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.salary-card{
+    background:rgba(91,53,57,0.08);
+    border:1px solid rgba(91,53,57,0.15);
+    border-radius:20px;
+    padding:30px 20px;
+    text-decoration:none;
+    color:#5b3539;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 20px rgba(91,53,57,0.15);
+}
+
+.salary-card:hover{
+    transform:translateY(-8px) scale(1.03);
+    background:rgba(91,53,57,0.15);
+    box-shadow:0 12px 25px rgba(91,53,57,0.25);
+}
+
+.salary-icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.salary-card span{
+    font-size:22px;
+    font-weight:bold;
+}
